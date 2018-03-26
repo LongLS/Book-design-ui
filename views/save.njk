@@ -1,0 +1,37 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+<form action="/edit-book" method="post" class="col-md-8 col-md-offset-2">
+    <img src="image/books-banner.jpg" height="100%" width="100%">
+    <br>
+    {% for book in book %}
+        <input id="id" type="hidden" name="id" value="{{book.getId()}}" readonly>
+    <label style="font-size: 20px; color: grey">Title:</label>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-book" style="color: steelblue; font-size: 20px"></i></span>
+        <input id="title" class="form-control" type="text" name="title" value="{{book.getTitle()}}">
+    </div>
+    <label style="font-size: 20px; color: grey">Author:</label>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user" style="color: steelblue; font-size: 20px"></i></span>
+        <input id="author" class="form-control" type="text" name="author" value="{{book.getAuthor()}}">
+    </div>
+    <div>
+        <label style="font-size: 20px; color: grey">Publisher:</label>
+        <label for="publisher"></label><select id="publisher" name="publisher_id" class="form-control">
+            {% for publisher in publishers %}
+            <option value="{{publisher.getId()}}">{{publisher.getName()}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <label style="font-size: 20px; color: grey">Price:</label>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-dollar" style="color: steelblue; font-size: 20px"></i></span>
+        <input id="price" class="form-control" type="text" name="price" value="{{book.getPrice()}}">
+    </div>
+    {% endfor %}
+    <br>
+    <button type="submit" class="btn btn-primary" style="width: 30%; background-color: steelblue">Save</button>
+</form>
+{% endblock %}

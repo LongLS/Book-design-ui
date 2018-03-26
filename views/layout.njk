@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<title>List Book</title>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="ajax/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="event/checkLength.js"></script>
+<script type="text/javascript" src="event/checkNull.js"></script>
+<meta name="viewport" content="device-width, initial-scale=1.0">
+
+<nav>
+    <div class="container">
+        <div class="row">
+            <hr class="hr-danger" />
+            <ol class="breadcrumb bread-danger">
+                <button class="btn btn-danger"><i class="fa fa-briefcase">&nbsp;</i><b>Library</b></button>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/create">CREATE</a></li>
+                <li class="active">ABOUNT</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+<main>
+    {% block content %}
+
+    {% endblock%}
+</main>
+
+<footer>
+    <div class="footer">
+        <i class="fa fa-git" style="font-size:25px"></i>
+        &nbsp;
+        <i class="fa fa-facebook-square" style="font-size:25px"></i>
+        &nbsp;
+        <i class="fa fa-instagram" style="font-size:25px"></i>
+        &nbsp;
+        <i class="fa fa-twitter" style="font-size:25px"></i>
+        <br>
+    </div>
+    <div class="icon">
+        <p>@2018 Sphinx-Software</p>
+    </div>
+</footer>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/test.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/input-Search.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/footer.css">

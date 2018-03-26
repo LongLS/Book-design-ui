@@ -1,0 +1,36 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+<form action="/create-book" method="post" class="col-md-8 col-md-offset-2">
+    <img src="image/books-banner.jpg" height="100%" width="100%">
+    <label style="font-size: 20px; color: grey">Title:</label>
+    <p id="showTitle" style="background-color: brown; display: none; color: white">Not null Title</p>
+    <p id="40length" style="background-color: brown; display: none; color: white">Title must less 40 length!</p>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-book" style="color: steelblue; font-size: 20px"></i></span>
+        <input id="title" class="form-control" name="title" placeholder="Title...">
+    </div>
+    <label style="font-size: 20px; color: grey">Author:</label>
+    <p id="showAuthor" style="background-color: brown; display: none; color: white">Not null Author</p>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user" style="color: steelblue; font-size: 20px"></i></span>
+        <input id="author" class="form-control" name="author" placeholder="Author...">
+    </div>
+    <label style="font-size: 20px; color: grey">Publisher:</label>
+    <label for="publisher"></label><select id="publisher" name="publisher_id" class="form-control">
+    <option value="">null</option>
+    {% for publisher in publishers %}
+    <option value="{{publisher.id}}">{{publisher.name}}</option>
+    {% endfor %}
+</select>
+    <label style="font-size: 20px; color: grey">Price:</label>
+    <p id="showPrice" style="background-color: brown; display: none; color: white">Not null Price</p>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-dollar" style="color: steelblue; font-size: 20px"></i></span>
+        <input id="price" type="text" class="form-control" name="price" placeholder="Price...">
+    </div>
+    <br>
+    <button id="click" type="submit" class="btn btn-primary" style="width: 30%; background-color: steelblue">Save</button>
+</form>
+{% endblock %}

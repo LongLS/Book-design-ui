@@ -1,0 +1,34 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+<div class="col-md-12 col-md-offset-3">
+    <div class="">
+        <div class="col-md-6">
+            <img src="image/logo.gif" height="100%" width="100%">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" class="form-control input-lg" placeholder="Keywords..." id="inputKeyword" />
+                    <span class="input-group-btn">
+                    <button class="btn btn-info btn-lg" type="button">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+                </div>
+                <div class="list">
+                    <ul class="list-group list-group-flush" id="listBooks">
+                        <li class="list-group-item">Anubis</li>
+                        <li class="list-group-item">Ash</li>
+                        <li class="list-group-item">Atum</li>
+                        <li class="list-group-item">Horus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="bookTemplate" type="text/html">
+    <li class="list-group-item"><a href="book/:id:">:bookTitle:</a></li>
+</script>
+{% endblock %}

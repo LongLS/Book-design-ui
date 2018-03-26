@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #527aab;
+    color: white;
+    text-align: right;
+    opacity: 0.6;
+}
+
+.icon {
+    position: fixed;
+    left: 2%;
+    bottom: -0.5%;
+    width: 100%;
+    color: white;
+}
